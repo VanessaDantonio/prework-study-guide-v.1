@@ -11,6 +11,7 @@
     <header id="top">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+      <h2>✨ Open the Console to See What's Happening ✨</h2>
     </header>
     <main>
       <section class="card" id="html-section">
@@ -43,15 +44,15 @@
           <li>Inline styles apply to a specific HTML tag, using a style attribute with a CSS rule to style a particular page element only. i.e. &lt;h1 style="color:red;"&gt; Prework Study Guide&lt;/h1&gt; </li>
           <li>Internal style sheet contains CSS rules for the webpage in the head section of the HTML file. The rules only apply to that page, and you can configure CSS classes and IDs, which are used to identify elements, to style multiple elements in the page code. i.e.<br>
             &lt;head&gt;<br>
-              &lt;style&gt;<br>
-               h1 {<br>
-                 color: red;<br>
-               }<br>
-              &lt;/style&gt;<br>
+              &nbsp&nbsp&nbsp&lt;style&gt;<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsph1 {<br>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcolor: red;<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+              &nbsp&nbsp&nbsp&lt;/style&gt;<br>
             &lt;/head&gt;</li>
           <li>External style sheet allows developers to keep all their CSS rules in a separate file. When using an external style sheet, we link the file using a &lt;link&gt; element placed in the HTML's &lt;head&gt;. i.e.<br>
             &lt;head&gt;<br>
-              &lt;link rel="stylesheet" href="./assets/style.css"/&gt;<br>
+              &nbsp&nbsp&nbsp&lt;link rel="stylesheet" href="./assets/style.css"/&gt;<br>
             &lt;/head&gt;</li>
           <li>A selector defines the element or attributes to which the rules, or declarations, will apply.</li>
           <li>Declarations contain two important components: the CSS property we want to apply and the value of the property, separated with a colon (:).</li>
@@ -81,7 +82,48 @@
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
         <ul>
-          <li>Enter your JavaScript notes here</li>
+          <li>JavaScript is a programming language that allows users to interact with websites.</li>
+          <li>A variable is a named container that allows us to store data in our code. i.e. var topics = "HTML, CSS, Git, JavaScript";</li>
+          <li>Control flow is the order in which a computer executes code in a script.</li>
+          <li>console.log method outputs a message to the web console by adding an argument. The message may be a single string (with optional substitution values), or it may be any one or more JavaScript objects. i.e. console.log(topics);</li>
+          <li>To link your JavaScript file to the HTML file: add the code under the &lt;footer&gt; element and above the closing element for &lt;body&gt;. i.e.<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;footer&gt;<br>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;p&gt;I can code!&lt;/p&gt;<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/footer&gt;<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;script src="./assets/script.js"&gt;&lt;/script&gt;<br>
+              &nbsp&nbsp&nbsp&lt;/body&gt;<br>
+            &lt;/html&gt;</li>
+          <li>An array is a single variable that is used to hold a group of related data. i.e. var shapes = ["triangle", "square", "pentagon", "circle"];</li>
+          <li>Array index is used to access an individual data item inside the array. i.e. console.log(shapes[0]);</li>
+          <li>We can find the length of an array by using a built-in property of an array, appropriately named length.</li>
+          <li>The if statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed. i.e.<br>
+              if (0) {<br>
+                &nbsp&nbsp&nbspconsole.log("I'm 0!")<br>
+              } else if (null) {<br>
+                &nbsp&nbsp&nbspconsole.log("I'm null!")<br>
+              } else if (true) {<br>
+                &nbsp&nbsp&nbspconsole.log("I'm true!")<br>
+              }</li>
+          <li>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over. Developers must use another statement, such as the conditional if statement, to interrupt the control flow by executing a block of code a specific number of times. i.e.<br>
+              for(var x = 0; x &lt; shapes.length; x++) {<br>
+                &nbsp&nbsp&nbspconsole.log(shapes[x]);<br>
+              }</li>
+          <li>A for loop contains the following three important statements:<br>
+            •	The first statement determines the starting point for our loop. i.e. var x = 0;<br>
+            •	The second statement is the condition. As long as the number in the variable x is less than the length of the array, the loop will keep running. i.e.	x &lt; shapes.length;<br>
+            • The final statement is what allows the array to iterate over each item. i.e. x++</li>
+          <li>The strict equality operator (= = =) checks to see if two values are equal, and returns a Boolean result true if the values are equal and false if the values are not equal.</li>
+          <li>We use a variable name plus “++” to iterate over each item, increasing the index number by 1 each time.</li>
+          <li>A function is a set of instructions that tells the computer how to perform a certain task. Functions do not automatically execute when the JavaScript file is run. Instead, you must call a function by name in order to execute it. i.e.<br>
+              function listTopics() {<br>
+                &nbsp&nbsp&nbspfor (var x = 0; x &lt; topics.length; x++) {<br>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspconsole.log(topics[x]);<br>
+                &nbsp&nbsp&nbsp}<br>
+              }</li>
+          <li>To call a function, we use the name of the function in our JavaScript file where we want the code to execute. i.e.<br>
+              console.log('Here are the topics we learned through Prework:');<br>
+              listTopics();</li>
+          <li>Math.floor() and Math.random() are both properties of JavaScript's built-in Math object that can be used together to generate a random number. i.e. var randomTopic = topics[Math.floor(Math.random() * topics.length)];</li>
         </ul>
       </section>
     </main>
@@ -89,5 +131,6 @@
     <footer>
       <p>I can code!</p>
     </footer>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
